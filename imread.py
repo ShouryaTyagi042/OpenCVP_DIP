@@ -3,11 +3,16 @@ import numpy as np
 img_path = "Python/DIP Workshop/images/sherlock_kid.png"
 img = cv2.imread(img_path)
 img_shape = img.shape
+kernel = np.ones((5, 5), np.uint8)
 cv2.imshow("Image", img)
 print(img)
 
 # image is in bgr format in opencv
 
+imgCany = cv2.Canny(img, 150, 200)
+imgDialated = cv2.dilate(imgCany, kernel, iterations=2)
+imgErode = cv2.erode(imgDialated,)
+imgResize = cv2.resize(img,)
 
 # GRAY IMAGE
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
