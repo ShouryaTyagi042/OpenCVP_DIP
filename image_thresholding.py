@@ -12,7 +12,7 @@ def threshold(img, threshold_value):
                 img[i][j] = 0
 
 
-img_path = "Python/DIP Workshop/images/book_page.jpg"
+img_path = "images/book_page.jpg"
 img = cv2.imread(img_path)
 # cv2.imshow("img", img)
 
